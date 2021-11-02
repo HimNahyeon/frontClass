@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h2>setTimeout</h2>
+    <script>
+        'use strict';
+
+        function hi(){
+            alert('안녕하세요! 여러분!');
+        }
+
+        const st = window.setTimeout(hi, 2000); //2초 (밀리세컨드) 후 실행
+
+        //clearTimeout(st) // clearTimeout해놓으면 아무리 기다려도 실행되지 않을것 ㅋㅋ 취소됐기때문
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다단 레이아웃</title>
+    <style>
+        div,h2,p{margin:0; padding:0;}
+        body{margin:10px;}
+        h2{padding:0 0 20px; text-align: center;}
+        div.col{
+            text-align: justify;
+            padding: 20px;
+            background-color: gold;
+
+            column-count: 3;
+            column-gap: 30px;
+            column-rule: 3px dashed white;
+        }
+        .col>h2{
+            column-span: all;
+        }
+    </style>
+</head>
+<body>
+    <h2>다단 레이아웃</h2>
+    <div class="col">
+        <h2>다단 레이아웃</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sed recusandae minima magni quis. Officiis, dignissimos. Excepturi doloribus, aspernatur nemo, adipisci vel fugit possimus aperiam dolores quas expedita quisquam minima.</p>
+    </div>
+</body>
+</html>

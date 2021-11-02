@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date객체</title>
+</head>
+<body>
+    <h2>Date객체</h2>
+    <script>
+        'use strict';
+        
+        //const date = new Date();       <- 객체를 만드는 법
+        console.log(new Date);    //변수에 안담고 객체 만들자마자 화면에 찍겠다.
+
+        console.log(new Date(21, 6, 20));
+        console.log(new Date(2021,5,20));
+
+        console.log(new Date(500000000000));
+
+
+        // date의 프로퍼티 메소드 들 사용
+        const date = new Date();
+        console.log(`현재 년도 : ${date.getFullYear()}`);
+        console.log(`현재 월 : ${date.getFullMonth()+1}`);        
+        console.log(`현재 일 : ${date.getFullDate()}`);
+
+        console.log(`현재 시간 : ${date.getHours()}`);        
+        console.log(`현재 분 : ${date.getMinutes()}`);        
+        console.log(`현재 초 : ${date.getSeconds()}`);        
+    </script>
+</body>
+</html>

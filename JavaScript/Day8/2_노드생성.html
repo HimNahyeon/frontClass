@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드의 생성</title>
+    <script>
+        'use strict';
+        const createNode = function(){
+            const elNode = document.getElementById('el'); //<p id="el">새로운 문장이 이 문장 앞에 추가됨</p>
+            const newNode = document.createElement('p'); // p태그를 새로 만들어냄
+            newNode.innerHTML = "<b>❤새로운요소❤</b>"; //newNode에 html형식으로 해당 내용을 넣어줌
+            document.body.insertBefore(newNode, elNode); //body태그에 newNode를 elNode앞에 넣어줌
+        }
+        const createAttr = function(){
+            const attr = document.getElementById('attr'); //<p id="atter">이 단락에 새로운 속성이 추가</p>
+            const newAttr = document.createAttribute('style'); // 'style'속성을 만들어라.
+            newAttr.value = 'color: deepskyblue; background-color: gold;'; // newAttr에 값을 추가해라
+            attr.setAttributeNode(newAttr);
+            //<p id="atter">이 단락에 새로운 속성이 추가</p>
+        }
+        const createText= function(){
+            const textNode = document.getElementById ('text'); //<p id="text"></p>
+            const newText = document.createTextNode('🎁😍🎂🎍'); //🎁😍🎂🎍라는 텍스트 노드를 만들어라.
+            textNode.appendChild(newText); // <p id="text">🎁😍🎂🎍</p>
+        }
+    </script>
+</head>
+<body>
+    <h2>노드의 생성</h2>
+    <p id="el">새로운 문장이 이 문장 앞에 추가됨</p>
+    <p id="atter">이 단락에 새로운 속성이 추가</p>
+    <p id="text"></p>
+
+    <button onclick="createNode()">요소노드생성</button>
+    <button onclick="createAttr()">속성노드생성</button>
+    <button onclick="createText()">텍스트노드생성</button>
+</body>
+</html>

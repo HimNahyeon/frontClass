@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계만들기</title>
+</head>
+<body>
+    <h2>시계만들기</h2>
+    <script>
+        'use strict';
+        
+        let timeId = null;  //전역으로 만들어서 초기화시켰기때문에 start, stop 에서 모두 사용가능.
+
+        function startClock(){//시계를 동작시키는 함수
+            timeId = setInterval(printTime, 1000); //1초마다 화면에 시계를 뿌려줌
+        }
+
+        function stopClock(){
+            clearInterval(timeId);
+        }
+
+        function printTime(){
+            const today = new Date();
+            const hh = today.getHours();
+            const mm = today.getMinutes();
+            const ss = today.getSeconds();
+
+            console.log(`${hh}:${mm}:${ss}`);
+            document.getElementById('result').innerHTML =  hh + ":" + mm + ":" + ss;
+            //result라는 id의 요소를 객체로 가져와라. 그리고 html을 넣어줘라.
+        }
+
+
+    </script>
+
+    <p><input type="button" value="시작" onclick="startClock()">
+        <input type="button" value="중지" onclick="stopClock()"></p>
+    <div id="result"></div>
+</body>
+</html>

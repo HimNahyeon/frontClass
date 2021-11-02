@@ -1,0 +1,33 @@
+/* 카페소개.html 의 CSS */
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{font-family: 'MaruBuri-Regular';}
+
+/*모바일*/
+#container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    height: 50px;
+    background-color: #997f53
+    ;
+}
+nav>ul{
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+}
+nav>ul>li{
+    display: inline-block;
+    margin: 15px 20px;
+}
+
+a{text-decoration: none;}
+a:link, a:visited{color:#d6c29f;}
+a:active, a:hover{color:white;}

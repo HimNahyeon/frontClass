@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점프로그램</title>
+</head>
+<body>
+    <h2>학점프로그램</h2>
+    <script>    
+        'use strict'
+
+        const name = prompt('이름을 입력하세요');
+        const kor = Number(prompt('국어점수을 입력하세요'));
+        const math = Number(prompt('수학점수을 입력하세요'));
+        const eng = Number(prompt('영어점수을 입력하세요'));
+        const total = kor+math+eng; 
+        const avg = total/3;
+        let score = null;
+
+        if(avg >= 90){
+            score = 'A';
+        }else if(avg >= 80){
+            score = 'B';
+        }else if(avg >=70){
+            score = 'C';
+        }else if(avg >=60){
+            score = 'D';
+        }else{
+            score = 'F';
+        }
+
+        console.log(
+            `
+            ${name}님의 성적표
+            국어점수 : ${kor} 점
+            수학점수 : ${math} 점
+            영어점수 : ${eng} 점
+            총점 : ${total} 점
+            평균 : ${avg} 점
+            학점 : ${score} 점
+            `
+        );
+    </script>
+</body>
+</html>

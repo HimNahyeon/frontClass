@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const str1 = '안녕하세요. Javascript';
+        console.log(str1);
+        
+        console.log(str1.length);
+
+        console.log(str1.indexOf('J'));
+        console.log(str1.indexOf('Java'));  // 조금이라도 다르거나 대소문자가 다르면 -1 찾지못함이 뜸
+        console.log(str1.indexOf('a'));  // 앞에서 탐색
+        console.log(str1.lastindexOf('a'));  //뒤에서 탐색
+        
+        
+        console.log(str1.charAt(7));  
+
+        console.log(str1.includes('Java'));  // 조금이라도 다르면 못찾아서 false반환
+
+        console.log(str1.substring(7));  // 매개변수가 1개면 해당 인덱스 부터 끝까지
+        console.log(str1.substring(7,11));  // 시작인덱스, 인덱스 직전까지
+        
+        console.log(str1.substr(7,4));  // 시작인덱스, 개수
+
+        const str2 = "사과,딸기,바나나,복숭아,체리,메론";
+        const fruit = str2.split(',');
+
+        /*
+            fruit[0] = "사과";
+            fruit[1] = "딸기";
+            fruit[2] = "바나나";
+            fruit[3] = "복숭아";
+            fruit[4] = "체리";
+            fruit[5] = "메론";
+        */
+
+        for(let f in fruit){
+            console.log(f,fruit[f]);
+        }
+        
+
+        //안녕하세요. Javascript
+        console.log(str1.replace('안녕하세요.',' Hello!'));
+
+        const str3= '         Javascript      ';
+        console.log(`🎁${str3}🎁`);
+        console.log(`🎁${str3.trim()}🎁`);
+    </script>
+</body>
+</html>

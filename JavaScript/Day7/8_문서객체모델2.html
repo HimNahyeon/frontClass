@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델 - 2</title>
+</head>
+<script>
+    'use strict';
+    window.onload = function(){   //html을 모두 읽고나서 스크립트를 실행해라. 
+        const gnb = document.getElementById("gnb")
+        console.log(gnb);
+        console.log(gnb.parentNode);
+        console.log(gnb.children[0]);
+        console.log(gnb.children[0].nextElementSibling);
+        console.log(gnb.children[0].children[1]);
+        console.log(gnb.children[0].children[1].nextElementSibling);
+        console.log(gnb.children[0].children[1].firstChild);  // ul 뒤의 공백을 text로 인식하여 공백text를 자식으로 출력
+        //텍스트,주석,공백 모두 인식한다.
+        console.log(gnb.children[0].children[1].firstElementChild);  // element로 찾으면 무조건 태그로 찾음
+    }
+    const gnb = document.getElementById('gnb');  //body위에 있기때문에 못읽어옴. 그래서 window.onload 함수를사용한다.
+    console.log('gnb');
+
+</script>
+<body>
+    <h2>문서객체모델 - 2</h2>
+    <div>
+        <nav id="gnb">
+            <ul>
+                <li class = "first">내용1</li>
+                <li>내용2</li>
+                <li>내용3</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

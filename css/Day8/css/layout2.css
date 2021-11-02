@@ -1,0 +1,29 @@
+div{
+    border: 1px solid gray;
+    padding: 30px;
+}
+#container{
+    width:1000px;    
+    margin: 0 auto;
+}
+    
+#header{
+    margin-bottom: 20px;
+}
+#side1{
+    width: 120px;
+    float: left;
+    margin-right: 40px;
+}
+#content{
+    width: 500px;
+    float: left;
+    margin-bottom: 20px;
+}
+#side2{
+    width: 120px;
+    float:right;
+}
+#footer{
+    clear:both;
+}

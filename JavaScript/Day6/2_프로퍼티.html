@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로퍼티</title>
+</head>
+<body>
+    <h2>프로퍼티</h2>
+    <script>
+        'use strict';
+
+        const user = {
+            userid : 'apple',
+            name : '김사과',
+            gender : '여자',
+            hp : '010-1111-1111',
+            birthday:'000101',
+            memberid: function(){ //이름이 없는 함수 -> 익명함수
+                return 'korea'+this.birthday; //this -> 같은 객체 내의 프로퍼티를 가리킴
+            }
+        }
+
+        console.log(user.userid);
+        console.log(user.name);
+        console.log(user.gender);
+        console.log(user.hp);
+        console.log(user.birthday);
+
+        const memberId = user.memberid();
+        console.log(memberId);
+
+        console.log(user.memberid);   //함수를 다른곳에 보내서 변수처럼 사용할 수 있다. js의 특징.
+
+
+        user.hp = '010-2222-2222'; // const 는 상수니까 수정이안돼야 정상인데 ......
+        console.log(user.hp);      // 수정이된다!!!!!!  왜냐면 stack을 못바꾸게하는거지 heap을 못바꾸게하는게아님.
+                                   // 변수 자체의 주소를 못바꾸게 하는거지. 프로퍼티 값은 바꿀 수 있다.
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window객체</title>
+</head>
+<body>
+    <h2>Window객체</h2>
+    <script>
+        'use strict';
+
+        for(let win in window){ //window안에 들어있는 기능의 갯수만큼 반복.
+            console.log(`${win} : ${window[win]}`);  //프로퍼티: 값    을 찍어줌
+        }
+    </script>
+</body>
+</html>

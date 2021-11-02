@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+    <h2>콜백함수</h2>
+    <script>
+        'use strict';
+
+        const num = [1,2,3,4,5];
+
+        num.forEach(x=>{
+            console.log(x*10);
+        });
+
+
+        //같은 결과의 익명함수 형식        
+        num.forEach(function(x){  //익명함수
+            console.log(x*10);
+        })
+        
+
+        function setUserid(userid, callback){ 
+            //이름을  그냥 callback이라고 쓴것 ㅋㅋㅋㅋㅋㅋㅋ 무조건 callback이라고쓰는거아님
+            console.log(`userid:${userid}`);
+            callback();  // 함수를 변수로 전달해서 그 함수안에서 실행하게 만드는게 ! 콜.백
+        }
+        
+
+        function finish(){
+            console.log('finish function!');
+        }
+
+        setUserid('apple',finish);
+
+
+        //예시 하나더.
+
+        const userid = 'apple';
+
+        function callbackFunc(callback){
+            let name = '반하나';
+            callback(name);
+        }
+
+        function userinfo(name){
+            console.log(`userid : ${userid}, name : ${name}`);
+        }
+
+        callbackFunc(userinfo);
+
+
+    </script>
+</body>
+</html>
